@@ -1,11 +1,13 @@
 DNSSHIM: NIC.br's DNS Secure Hidden Master
 
-version 2.2.2
-	* Fix to allow AXFR responses bigger than 32767 bytes
+version 2.3_il1
+	* Apply old bugfixes not integrated in official dnsshim
+	    * Fix to allow AXFR responses bigger than 32767 bytes
+	    * Fix for list-zones and change-password
+	    * Added hook to capture a shutdown signal from the Operating System
 
-version 2.2.1
-	* Fix for list-zones and change-password
-	* Added hook to capture a shutdown signal from the Operating System
+version 2.3
+	* Memory leak fixed
 
 version 2.2
 	* TLS certificate import fix

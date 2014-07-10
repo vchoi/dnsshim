@@ -22,12 +22,16 @@
 		<copy todir="${build}" >
 		    <fileset dir="${src}">
 		    	<include name="**/resources/**" />
+<<<<<<< HEAD
 		    </fileset>
 		</copy>
 	    <copy todir="${build}/META-INF">
 			<fileset dir="${src}/META-INF">
 				<include name="*" />
 			</fileset>
+=======
+		    </fileset>	
+>>>>>>> official 2.3 release
 		</copy>
 	</target>
 	
@@ -40,7 +44,12 @@
 		<!--  signer -->
 		<jar jarfile="${dist}/dnsshim-signer.jar">
 			<fileset dir="${build}/" excludes="**/xfrd/" />
+<<<<<<< HEAD
 		    <manifest>
+=======
+		    
+			<manifest>
+>>>>>>> official 2.3 release
 				<attribute name="Main-Class"
 					value="br/registro/dnsshim/signer/server/SignerServer" />
 				<attribute name="Class-Path" value="${manifest-classpath-signer} ." /> <!-- class-path  + current directory -->
@@ -83,7 +92,9 @@
 		<map from="${lib.app.dir}" to="lib" /> <!-- to relative path -->
 		<path id="class.path">
 			<fileset dir="lib">
-				<include name="**/*.jar" />
+				<!-- <include name="**/*.jar" /> -->
+				<include name="*log4j*" />
+				<include name="*commons-codec*" />
 			</fileset>
 		</path>
 	</pathconvert>
@@ -93,7 +104,8 @@
 		<map from="${lib.app.dir}" to="lib" /> <!-- to relative path -->
 		<path id="class.path">
 			<fileset dir="lib">
-				<include name="**/*.jar" />
+				<include name="*log4j*" />
+				<include name="*commons-codec*" />
 			</fileset>
 		</path>
 	</pathconvert>

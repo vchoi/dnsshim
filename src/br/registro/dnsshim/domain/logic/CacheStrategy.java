@@ -45,10 +45,6 @@ public abstract class CacheStrategy<K, V extends Cacheable<K>> {
 		}
 	};
 	
-	protected Map<K,V> getCache() {
-		return cache;
-	}
-	
 	public synchronized V remove(K k) {
 		if (logger.isTraceEnabled()) {
 			logger.trace("Removing object from cache");
